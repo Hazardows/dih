@@ -1,0 +1,1 @@
+..\builder\builder.exe build src build libdih.dll "-Wall -Wextra -Wno-unused-parameter" "-DDIH_API_EXPORT" "none" "-O2 -shared"

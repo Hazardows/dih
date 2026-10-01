@@ -1,0 +1,27 @@
+// just a test code
+
+main() {
+    var x = nil
+    var* y = &x
+    
+    while (x == nil) {
+        *y = random(-67, 67)
+
+        if (x == -67) {
+            print("wrong 67, you aren't lucky today!\n")
+            return -67
+        }
+        else if (x == 67) {
+            print("you've got the right 67, that's very lucky!\n");
+            return 67
+        }
+        else if (x == 0) {
+            // let's make this crash
+            y = null
+            x = nil
+        }
+        else {
+            *y = nil
+        }
+    }
+}

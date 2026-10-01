@@ -1,0 +1,14 @@
+import math
+import injected
+
+string main() {
+    var n = math::random()
+    n **= 2
+
+    if (injected::is_even(n)) {
+        return "i've found an even number sir!"
+    }
+    else {
+        return "i haven't found an even number, sorry..."
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build dih",
+            "type": "shell",
+            "command": "./build.sh",
+            "windows":{
+                "command": "./build.bat"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/dih"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "Build dihi",
+            "type": "shell",
+            "command": "./build.sh",
+            "options": {
+                "cwd": "${workspaceFolder}/dihi"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "Build all",
+            "type": "shell",
+            "command": "${workspaceFolder}/build-all.bat",
+            "args": [
+                "windows",
+                "build",
+                "debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "Build (and update) gen_ast_expr",
+            "type": "shell",
+            "command": "./build.sh",
+            "options": {
+                "cwd": "${workspaceFolder}/gen_ast_expr"
+            },
+            "windows": {
+                "command": "./ast_expr.bat",
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "Build ast printer test",
+            "type": "shell",
+            "command": "./build.sh",
+            "options": {
+                "cwd": "${workspaceFolder}/ast_printer_test"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        }
+    ]
+}

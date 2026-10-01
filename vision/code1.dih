@@ -1,0 +1,20 @@
+// a dih script
+
+main() {
+    var message = "hello dih"
+    print(message)
+
+    var x = nil
+    var y = 66
+    x = &y
+    *x++
+
+    if (x == 67) {
+        print("six seven")
+    }
+    else {
+        print(x)
+    }
+    
+    return 
+}

@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch dih console",
+            "request": "launch",
+            "type": "cppdbg",
+            "windows": {
+                "console": "integratedTerminal",
+                "type": "cppvsdbg",
+            },
+            "program": "${workspaceFolder}/bin/dihi",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/bin",
+            "environment": []
+        },
+        {
+            "name": "Launch dih code",
+            "request": "launch",
+            "type": "cppdbg",
+            "windows": {
+                "console": "integratedTerminal",
+                "type": "cppvsdbg",
+            },
+            "program": "${workspaceFolder}/bin/dihi",
+            "args": ["code.dih"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": []
+        },
+        {
+            "name": "Launch ast printer test",
+            "request": "launch",
+            "type": "cppdbg",
+            "program": "${workspaceFolder}/ast_printer_test/build/test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": []
+        }
+    ]
+}
